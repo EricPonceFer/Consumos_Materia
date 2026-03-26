@@ -1,0 +1,6 @@
+pandas
+dash-bootstrap-components
+dash
+openpyxl 
+xlrd
+plotly

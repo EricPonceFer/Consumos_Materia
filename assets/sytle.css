@@ -1,0 +1,141 @@
+body{
+    margin : 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado (header) */
+.header {
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+    padding: 10px;
+}
+
+.btn-clean {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+/* hover */
+.btn-clean:hover {
+    background-color: #dfe6e9;
+    transform: translateY(-2px);  /* levanta */
+}
+
+/* click */
+.btn-clean:active {
+    transform: scale(0.95);
+}
+
+/* focus (teclado) */
+.btn-clean:focus {
+    outline: none;
+}
+
+.img-icon {
+    cursor: pointer;
+    width: 30px;
+    background: transparent !important;
+    border: none !important;
+}
+/* Estilos para el contenido principal */
+.main {
+    display: flex;  /* 🔥 esto reemplaza fixed */
+}
+.content {
+    width: 100%;  /* 🔥 ocupa todo el espacio restante */
+    padding: 20px;
+    background-color: rgb(226, 226, 226);
+    transition: all 0.3s ease;
+}
+/* 🔹 CONTENIDO EXPANDIDO */
+/* Estilos para el sidebar (header) */
+
+.sidebar {
+    width: 25%;
+    min-height: calc(100vh - 60px); /* 🔥 ocupa toda la pantalla */
+    background-color: #ffffff;
+    padding: 0px 7px 0px 20px;
+    transition: all 0.3s ease;
+}
+
+/* 🔹 SIDEBAR COLAPSADO */
+.sidebar.collapsed {
+    width: 70px;
+    overflow: hidden;
+}
+
+.btn-toggle {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+
+/* 🔹 SIDEBAR COLAPSADO */
+.sidebar.collapsed {
+    width: 4%;
+    overflow: hidden;
+}
+.sidebar.collapsed .toggle-icon {
+    transform: rotate(360deg);
+}
+
+/* 🔹 TITULO */
+.sidebar-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 🔹 SECCIONES */
+.sidebar-section {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+/* 🔹 LINKS */
+.nav-link {
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: all 0.2s ease;
+}
+
+/* 🔥 hover */
+.nav-link:hover {
+    background-color: #ede7f6 !important; /* morado suave */
+    color: #6f42c1 !important;           /* morado fuerte */
+}
+
+/* 🔥 activo */
+.nav-link.active {
+    background-color: #6f42c1 !important; /* morado fuerte */
+    color: white !important;
+}
+.sidebar.collapsed .sidebar-section,
+.sidebar.collapsed .nav-link {
+    display: none;
+}
